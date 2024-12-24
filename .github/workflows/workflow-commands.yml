@@ -12,6 +12,13 @@ jobs:
       - name: "Group messages"
         run: 
          echo "::group::Group 1"
-         echo " M 1"                
-         echo " M 2"                
+         echo "M 1"                
+         echo "M 2"                
          echo "::endgroup::"                         
+      - name: "S 1"
+        run: 
+          echo "MY_VAR=Paresh" >> $GITHUB_ENV
+      - name: "S 2"
+        run: 
+          echo $MY_VAR
+   
