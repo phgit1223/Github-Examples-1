@@ -1,0 +1,17 @@
+name: Workflow Commands Example
+
+on:
+    push:
+      branches:
+        - main
+
+jobs:
+  myjob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Group messages"
+        run: 
+         echo "::group::Group 1"
+         echo " M 1"                
+         echo " M 2"                
+         echo "::endgroup::"                         
